@@ -7,7 +7,6 @@
 #pragma once
 
 #include <AK/Forward.h>
-#include <AK/IterationDecision.h>
 #include <AK/StdLibExtras.h>
 
 namespace AK::Concepts {
@@ -33,7 +32,6 @@ concept Unsigned = IsUnsigned<T>;
 template<typename T>
 concept Enum = IsEnum<T>;
 
-template<typename T, typename U>
 concept SameAs = IsSame<T, U>;
 
 template<typename U, typename... Ts>
@@ -127,6 +125,5 @@ using AK::Concepts::OneOf;
 using AK::Concepts::OneOfIgnoringCV;
 using AK::Concepts::SameAs;
 using AK::Concepts::Signed;
-using AK::Concepts::SpecializationOf;
 using AK::Concepts::Unsigned;
 using AK::Concepts::VoidFunction;
